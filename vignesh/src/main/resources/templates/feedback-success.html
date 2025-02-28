@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Feedback Submitted</title>
+  <style>
+    body { text-align: center; font-family: Arial, sans-serif; }
+    .message { margin-top: 50px; font-size: 20px; }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<div class="message">
+  <h1>Feedback Submitted Successfully!</h1>
+  <p th:text="${message}"></p>
+  <button id="click">Back to Home</button>
+</div>
+<script>
+$(document).ready(function() {
+$("#click").click(function() {
+window.location.href = "http://localhost:8080/home";
+});
+});
+</script>
+</body>
+</html>
